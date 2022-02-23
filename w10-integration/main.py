@@ -41,9 +41,9 @@ integrate(1.22*(10**-4), 1.22*(10**-4)*0.5, 5, fun, simpsonIntegration)
 
 def plot():
     initialConcentration = 1.22 * (10**-4)
-    x = np.array([1.22, 1.20, 1.0, 0.8, 0.6, 0.4, 0.2])
-    x = x * (10**-4)
-    y = simpsonIntegration(initialConcentration, x, 5, fun)
+    y = np.array([1.22, 1.20, 1.0, 0.8, 0.6, 0.4, 0.2])
+    y = y * (10**-4)
+    x = simpsonIntegration(initialConcentration, y, 5, fun)
     font = {'family': 'serif',
         'color':  'darkred',
         'weight': 'bold',
@@ -52,8 +52,8 @@ def plot():
     plt.figure(figsize=(12, 7))
     plt.plot(x, y, marker='o')
     plt.title("Time vs Oxygen Concentration Graph", fontdict=font)
-    plt.xlabel("Oxygen Concentration, x(moles/cc)", fontdict=font)
-    plt.ylabel("Time, t(s)", fontdict=font)
+    plt.ylabel("Oxygen Concentration, x(moles/cc)", fontdict=font)
+    plt.xlabel("Time, t(s)", fontdict=font)
     plt.grid()
     plt.show()
 

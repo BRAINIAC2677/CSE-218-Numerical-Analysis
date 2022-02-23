@@ -49,7 +49,7 @@ def Main():
     n = 3
     A = np.array([[-2, 0, 1], [-1, 7, 1], [5,-1, 1]])
     B = np.array([[-4], [-50], [-26]])
-    #n,A, B = take_input()
+    n,A, B = take_input()
     np.set_printoptions(formatter={'float': lambda x: "{0:0.4f}".format(x)})
     X = GaussianElimination(A, B)
     print("The Solution Vector:")
